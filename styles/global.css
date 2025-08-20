@@ -13,7 +13,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+    font-family: "Cocon";
+    src: url("assets/fonts/CoconRegularFont.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
+
     --bg-color: #f5f5f5;
     --bg-header: #9CA0A0;
     --bg-primary-section: linear-gradient(to bottom, #9CA0A0 55%, #DBC192 100%);
@@ -29,6 +38,7 @@
     --font-span-color: #800020;
     --font-broken-color-white: #E7E7E7;
     --font-broken-color-beige: #DFCEAF;
+
 
     --ff-sans: 'Cocon', 'Poppins', system-ui, sans-serif;
     --fw-base: 400;
