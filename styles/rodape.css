@@ -1,0 +1,186 @@
+#rodape {
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #9CA0A0;
+    padding: 2rem 1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+#rodape a {
+    cursor: pointer;
+}
+
+#rodape .logo {
+    margin: auto;
+}
+
+#rodape h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color: #000;
+    font-family: 'Cocon', system-ui, sans-serif;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.signup-form .form-group {
+    position: relative;
+}
+
+#rodape .logo img {
+    max-width: 7.25rem;
+    height: auto;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+
+.signup-form label {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.signup-form button {
+    margin-top: 1.5rem;
+    align-self: center;
+    padding: 0.75rem 2rem;
+    background-color: #aaa;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    letter-spacing: 0px;
+}
+
+.signup-form button:hover {
+    background-color: #000;
+    transition: .4s ease;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.footer-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-icon {
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.footer-info {
+    min-width: 218px;
+    border-left: 2px solid #DBC192;
+    padding-left: 1rem;
+
+}
+
+.footer-info p {
+    margin: 0.2rem 0;
+    font-size: 0.75rem;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+
+
+@media (min-width: 80em) {
+    #rodape {
+        text-align: left;
+        padding: 4rem 0;
+    }
+
+    #rodape .logo img {
+        min-width: 11.25rem;
+        height: auto;
+    }
+
+    #rodape h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .signup-form {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .signup-form .form-group {
+        width: 220px;
+    }
+
+    .signup-form button {
+        margin-bottom: 0.3rem;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+
+    }
+
+    .footer-info p {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+
+    .footer-container {
+        min-width: 100%;
+    }
+}

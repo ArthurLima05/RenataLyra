@@ -1,0 +1,84 @@
+#slogan {
+    background: url('/assets/images/bg-slogan-mobile.svg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    & h2 {
+        color: var(--font-first-section-color);
+        line-height: 1.0;
+        font-weight: 300;
+
+    }
+}
+
+
+#slogan span {
+    display: block;
+    margin: 10px 0;
+}
+
+#slogan .left {
+    text-align: left;
+}
+
+#slogan .right {
+    text-align: right;
+}
+
+#slogan .center {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+@media (min-width: 80em) {
+    #slogan {
+        background: url('/assets/images/bg-slogan.svg') no-repeat center center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 50px 20px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #slogan h2 {
+        font-size: 3rem;
+        line-height: 0.9;
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 90px;
+        margin: 0 auto;
+    }
+
+    #slogan span {
+        display: block;
+        width: 100%;
+    }
+
+    #slogan .left {
+        text-align: left;
+    }
+
+    #slogan .right {
+        text-align: right;
+    }
+
+    #slogan .center {
+        text-align: center;
+        font-size: 3.5rem;
+    }
+}

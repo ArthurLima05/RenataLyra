@@ -1,0 +1,55 @@
+#invisalign {
+    color: #000000;
+    background: var(--bg-second-section);
+    text-align: center;
+
+}
+
+#invisalign strong {
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.08em;
+    color: var(--font-span-color);
+    font-size: var(--fs-sm);
+}
+
+#invisalign header h2 {
+    margin-top: .5rem;
+}
+
+.invisalignSection-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#invisalign p {
+    margin-top: 2.125rem;
+    margin-bottom: 2.125rem;
+    font-size: 0.875rem;
+}
+
+.highlightInvisalign {
+    color: var(--font-span-color);
+}
+
+#invisalign button {
+    margin: auto;
+    margin-top: 2rem;
+}
+
+@media (width >=80em) {
+    #invisalign {
+        text-align: start;
+    }
+
+    #invisalign p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #invisalign button {
+        margin: 0;
+    }
+
+
+}

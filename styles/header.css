@@ -1,0 +1,17 @@
+#header {
+    & a:first-child {
+        margin-right: auto;
+    }
+
+    & a {
+        cursor: pointer;
+    }
+
+    background-color: var(--bg-header);
+}
+
+@media (width >=80em) {
+    .logo {
+        width: 180px;
+    }
+}

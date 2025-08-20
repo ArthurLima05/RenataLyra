@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --bg-header: #9CA0A0;
+    --bg-primary-section: linear-gradient(to bottom, #9CA0A0 55%, #DBC192 100%);
+    --bg-second-section: linear-gradient(to bottom, #F5E8D7 0%, #F5F5F5 100%);
+    --bg-fourth-section: linear-gradient(to bottom, #f5f5f5 0%, #9CA0A0 100%);
+    --bg-fifth-section: linear-gradient(to bottom, #f5f5f5 0%, #DBC192 100%);
+    --bg-sixth-section: #DBC192;
+
+    --font-first-section-color: #f5f5f5;
+    --font-primary-color: #DBC192;
+    --font-second-color: #000000;
+    --font-third-color: #9ca0a0;
+    --font-span-color: #800020;
+    --font-broken-color-white: #E7E7E7;
+    --font-broken-color-beige: #DFCEAF;
+
+    --ff-sans: 'Cocon', 'Poppins', system-ui, sans-serif;
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+
+    --fs-sm: 0.875rem;
+    --fs-base: 1.125rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2.5rem;
+
+    --py-sm: 1rem;
+    --py-base: 1.25rem;
+    --py-lg: 1.5rem;
+    --py-xl: 3rem;
+    --px-lg: 1.5rem;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-base);
+    line-height: 1.6;
+    color: var(--font-primary-color);
+}
+
+body {
+    background-color: var(--font-third-color);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: var(--fs-xl);
+}
+
+h2 {
+    font-size: var(--fs-lg);
+}
+
+h3 {
+    font-size: var(--fs-base);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-first-section-color);
+    cursor: default;
+}
+
+a:hover {
+    color: var(--font-primary-color);
+    transition: 0.25s;
+}
+
+
+
+ul[role="list"] {
+    list-style: none;
+
+}
+
+@media (width >=80em) {
+    :root {
+        --fs-sm: 1rem;
+        --fs-lg: 2rem;
+        --fs-xl: 3rem;
+        --fs-2xl: 4rem;
+
+        --py-sm: 1.25rem;
+        --py-base: 1.5rem;
+        --py-lg: 2.5rem;
+        --py-xl: 5rem;
+        --px-sm: 1.25rem;
+        --px-lg: 2rem;
+    }
+}
