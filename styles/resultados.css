@@ -1,60 +1,173 @@
-#resultados {
+/* ==== SEÇÃO DE RESULTADOS ==== */
+.results-section {
+    margin: 0;
+    padding: 40px 0;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #DBC192 100%);
+}
+
+/* ==== TÍTULO ==== */
+.results-title {
     text-align: center;
-    background: var(--bg-fifth-section);
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+}
 
-    & .grid-resultados {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+/* ==== CONTAINER DO CARROSSEL ==== */
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==== WRAPPER DO CARROSSEL ==== */
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== FAIXA DO CARROSSEL ==== */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    gap: 24px;
+    /* 🔹 Espaçamento entre os cards no desktop */
+}
+
+/* ==== ITENS DO CARROSSEL ==== */
+.instagram-item {
+    flex: 0 0 350px;
+    /* 🔹 Largura fixa no desktop */
+    height: 450px;
+    /* 🔹 Altura do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+    background-color: transparent;
+}
+
+/* ==== LOADER ENQUANTO EMBED NÃO CARREGA ==== */
+.instagram-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.instagram-item.loaded::before {
+    display: none;
+}
+
+/* ==== ANIMAÇÃO DO LOADER ==== */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
-    & .btn .btn-lg .a {
-        color: #DBC192;
-    }
-
-    .imagem-grid {
-        width: 100%;
-        overflow: hidden;
-        border-radius: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        height: auto;
-    }
-
-    .imagem-grid img {
-        object-fit: contain;
-        width: 100%;
-        height: auto;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border-radius: 45px;
-    }
-
-    & h1 {
-        margin-bottom: 2rem;
-    }
-
-    & button {
-        display: block;
-        margin: 1rem auto 0;
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
-@media (width >=80em) {
-    #resultados {
+/* ==== EMBEDS DO INSTAGRAM ==== */
+.instagram-item blockquote,
+.instagram-item iframe {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    min-height: 100% !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 
-        & .grid-resultados {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-        }
+/* ==== DOTS DE NAVEGAÇÃO ==== */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
 
-        & .imagem-grid {
-            height: 18.625rem;
-        }
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-        & .imagem-grid img {
-            object-fit: cover;
-            min-width: 100%;
-        }
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+/* ==== MOBILE ATÉ 768px ==== */
+@media (max-width: 768px) {
+    .results-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .carousel-track {
+        gap: 0;
+        /* 🔹 Remove o espaçamento no mobile */
+    }
+
+    .instagram-item {
+        flex: 0 0 100%;
+        /* 🔹 Sempre 1 card por vez */
+        height: 550px;
+        min-height: 550px;
+        margin: 0;
+        border-radius: 12px;
+    }
+
+    /* Força o embed a ocupar todo o espaço */
+    .instagram-item blockquote,
+    .instagram-item iframe {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        border-radius: 10px !important;
+        box-shadow: none !important;
+    }
+}
+
+/* ==== MOBILE PEQUENO ATÉ 480px ==== */
+@media (max-width: 480px) {
+    .results-title {
+        font-size: 1.7rem;
+    }
+
+    .instagram-item {
+        height: 430px;
+        min-height: 400px;
     }
 }

@@ -227,50 +227,27 @@
         </div>
     </section>
 
-    <section id="resultados" class="py-xl">
+    <section class="results-section py-xl" id="resultados">
         <div class="container">
-            <h1>Resultados Renata Lyra</h1>
-            <div class="grid-resultados">
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto1resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto2resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto3resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto4resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto5resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto6resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto7resultado.svg" alt="">
-                </div>
-
-                <div class="imagem-grid">
-                    <img src="/assets/images/foto8resultado.svg" alt="">
+            <h1 class="results-title">Resultados</h1>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Placeholders para posts do Instagram -->
+                        <div class="instagram-item" data-instagram="https://www.instagram.com/p/DKstp2iMjtz/">
+                        </div>
+                        <div class="instagram-item" data-instagram="https://www.instagram.com/p/DLaRpQJsjam/"></div>
+                        <div class="instagram-item" data-instagram="https://www.instagram.com/p/EXEMPLO3/"></div>
+                        <div class="instagram-item" data-instagram="https://www.instagram.com/p/EXEMPLO4/"></div>
+                        <div class="instagram-item" data-instagram="https://www.instagram.com/p/EXEMPLO5/"></div>
+                        <div class="instagram-item" data-instagram="https://www.instagram.com/p/EXEMPLO6/"></div>
+                    </div>
                 </div>
             </div>
-            <a href="https://wa.me/5581986243197?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20por%20Renata%20Lyra.%20" target="_blank">
-                <button class="btn btn-lg">
-                    <span class="desktop-only btn-icon btn-icon-wpp-berge"></span>
-                    Fale Conosco
-                </button>
-            </a>
+            <div class="dots-container" id="dotsContainer"></div>
         </div>
     </section>
+
 
     <section id="depoimentos" class="py-lg">
         <div class="container">
@@ -329,6 +306,7 @@
                 <img src="/assets/icons/seta-esquerda.svg" alt="Seta Esquerda" class="seta seta-esquerda">
                 <img src="/assets/icons/seta-direita.svg" alt="Seta Direita" class="seta seta-direita">
             </div>
+        </div>
         </div>
     </section>
 
@@ -401,6 +379,8 @@
 
 
     <script src="/assets/js/carousel.js" defer></script>
+    <script src="/assets/js/InstagramCarousel.js" defer> </script>
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 
 </html>
